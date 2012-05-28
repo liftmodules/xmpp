@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package net.liftweb
+package net.liftmodules
 package xmpp
 
 import java.util.Collection
@@ -24,8 +24,9 @@ import collection.mutable.Map
 
 import org.jivesoftware.smack._
 import packet.{Message, Presence}
-import util.StringUtils
 
+import net.liftweb._
+import util.StringUtils
 import actor._
 
 
