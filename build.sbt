@@ -1,5 +1,7 @@
 name := "xmpp"
 
+organization := "net.liftmodules"
+
 liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
 version <<= liftVersion apply { _ + "-1.1-SNAPSHOT" }
@@ -31,7 +33,6 @@ libraryDependencies <++= scalaVersion { sv =>
       })  ::
   Nil
 }
-
 
 publishTo <<= version { _.endsWith("SNAPSHOT") match {
  	case true  => Some("snapshots" at "https://oss.sonatype.org/content/repositories/snapshots")
